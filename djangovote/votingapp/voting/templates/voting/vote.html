@@ -1,0 +1,128 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colossus Toastmasters Voting</title>
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+</head>
+<body class="bodyindex">
+<section class="logo">
+	<img src="/static/img/logo.jpg/" class="image"><br> Colossus Toastmasters - NIT Trichy 
+	<div class="image1" align="center">E-Ballot</div> 
+</section>
+<form method="post"  class="form1" onsubmit="return  confirm('Do you want to submit the form?');">
+	{% csrf_token %}
+    <label for="us" class="user">Best Speaker</label><br>
+    <input id="username" type="text" name="speaker" maxlength="1"><br><br>
+
+    <label for="us" class="user">Best Table Topic Speaker</label><br>
+    <input id="username" type="text" name="table" maxlength="1"><br><br>
+    
+    <label for="us" class="user">Best Evaluator </label><br>
+    <input id="username" type="text" name="eval" maxlength="1">
+    <br><br>
+    <input type="submit" value="Submit" class="submit">
+    <section class="d">
+    	
+    </section>
+</form>
+
+
+<style type="text/css">
+@media screen and (orientation: landscape)
+{
+	.bodyindex
+	{	background-color: #004165;
+
+	}
+	.image
+	{
+		width: 8%;
+		height: 8%;
+	}
+
+	.image1
+	{
+		width: 100%;
+		font-size: 300%;
+	}
+	
+	.logo
+	{
+		background-color: #004165;
+		font-family: 'Rajdhani', sans-serif; 
+		color: white;
+	}
+	.user
+	{	font-family: 'Rajdhani', sans-serif; 
+		font-size: 150%;
+	}
+
+	#username
+	{	
+		width: 15%;	
+
+	}
+	.form1
+	{	height: 70%;
+		width: 100%;
+		padding-left: 30%;
+		padding-top: 10%;
+		background-color: white;
+	}
+	.d
+	{	padding-top: 8%; 
+	 }
+}
+
+@media screen and (orientation: portrait)
+{
+	.bodyindex
+	{	background-color: #004165;
+
+	}
+	.image
+	{
+		width: 10%;
+		height: 10%;
+	}
+
+	.image1
+	{
+		width: 100%;
+		font-size: 300%;
+	}
+	
+	.logo
+	{
+		background-color: #004165;
+		font-family: 'Rajdhani', sans-serif; 
+		color: white;
+	}
+	.user
+	{	font-family: 'Rajdhani', sans-serif; 
+		font-size: 250%;
+	}
+
+	#username
+	{	
+		width: 50%;	
+		height: 100px;
+		border-color: black;
+
+	}
+	.form1
+	{	height: 80%;
+		width: 100%;
+		padding-left: 40%;
+		padding-top: 20%;
+		background-color: white;
+	}
+	.d
+	{	padding-top: 8%; 
+	 }
+}
+
+</style>
+</body>
+</html>

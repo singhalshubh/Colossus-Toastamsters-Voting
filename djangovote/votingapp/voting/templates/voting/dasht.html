@@ -1,0 +1,141 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colossus Toastmasters Voting</title>
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+</head>
+<body class="bodyindex">
+<section class="logo">
+	<img src="/static/img/logo.jpg/" class="image"><br> Colossus Toastmasters - NIT Trichy 
+	<div class="image1" align="center">E-Ballot</div> 
+</section>
+
+<form method="post" class="form1">
+	{% csrf_token %}
+
+    <label for="t1" class="user">Table Topic Speaker 1</label><br>
+    <input id="t1" type="text" name="t1"><br><br>
+    
+    <label for="t2" class="user">Table Topic Speaker 2</label><br>
+    <input id="t2" type="text" name="t2"><br><br>
+    
+    <label for="t3" class="user">Table Topic Speaker 3</label><br>
+    <input id="t3" type="text" name="t3"><br><br>
+    
+    <label for="t4" class="user">Table Topic Speaker 4</label><br>
+    <input id="t4" type="text" name="t4"><br><br>
+
+    <label for="t5" class="user">Table Topic Speaker 5</label><br>
+    <input id="t5" type="text" name="t5"><br><br>
+    
+    <label for="t6" class="user">Table Topic Speaker 6</label><br>
+    <input id="t6" type="text" name="t6"><br><br>
+    
+    <label for="t7" class="user">Table Topic Speaker 7</label><br>
+    <input id="t7" type="text" name="t7"><br><br>
+
+    
+    <input type="submit" value="Submit" class="submit">
+    <section class="d"> 
+    	
+    </section>
+</form>
+
+<style type="text/css">
+@media screen and (orientation: landscape)
+{
+	.bodyindex
+	{	background-color: #004165;
+
+	}
+	.image
+	{
+		width: 8%;
+		height: 8%;
+	}
+
+	.image1
+	{
+		width: 100%;
+		font-size: 300%;
+	}
+	
+	.logo
+	{
+		background-color: #004165;
+		font-family: 'Rajdhani', sans-serif; 
+		color: white;
+	}
+	.user
+	{	font-family: 'Rajdhani', sans-serif; 
+		font-size: 150%;
+	}
+
+	#t1,#t2,#t3,#t4,#t5,#t6,#t7
+	{
+		width: 20%;
+		
+	}
+	.form1
+	{	height: 70%;
+		width: 100%;
+		padding-left: 30%;
+		padding-top: 10%;
+		background-color: white;
+	}
+	.d
+	{	padding-top: 8%; 
+	 }
+}
+
+@media screen and (orientation: portrait)
+{ 	
+		.bodyindex
+	{	background-color: #004165;
+
+	}
+	.image
+	{
+		width: 8%;
+		height: 8%;
+	}
+
+	.image1
+	{
+		width: 100%;
+		font-size: 300%;
+	}
+	
+	.logo
+	{
+		background-color: #004165;
+		font-family: 'Rajdhani', sans-serif; 
+		color: white;
+	}
+	.user
+	{	font-family: 'Rajdhani', sans-serif; 
+		font-size: 150%;
+	}
+
+	#t1,#t2,#t3,#t4,#t5,#t6,#t7
+	{
+		width: 30%;
+		border-color: black;
+		height: 100px;
+		
+	}
+	.form1
+	{	height: 70%;
+		width: 100%;
+		padding-left: 30%;
+		padding-top: 10%;
+		background-color: white;
+	}
+	.d
+	{	padding-top: 8%; 
+	 }
+}
+</style>
+</body>
+</html>

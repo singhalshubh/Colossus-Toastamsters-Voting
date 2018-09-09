@@ -1,0 +1,131 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colossus Toastmasters Voting</title>
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+</head>
+<body class="bodyindex">
+<section class="logo">
+	<img src="/static/img/logo.jpg/" class="image"><br> Colossus Toastmasters - NIT Trichy 
+	<div class="image1" align="center">E-Ballot</div> 
+</section>
+
+<form method="post" class="form1">
+	{% csrf_token %}
+    <label for="s1" class="user">Speaker 1</label><br>
+    <input id="s1" type="text" name="s1"><br><br>
+    
+    <label for="s2" class="user">Speaker 2</label><br>
+    <input id="s2" type="text" name="s2"><br><br>
+    
+    <label for="s3" class="user">Speaker 3</label><br>
+    <input id="s3" type="text" name="s3"><br><br>
+    
+    <label for="s4" class="user">Speaker 4</label><br>
+    <input id="s4" type="text" name="s4"><br><br>
+    
+    <input type="submit" value="Submit" class="submit">
+    <section class="d"> 
+    	
+    </section>
+</form>
+
+<style type="text/css">
+@media screen and (orientation: landscape)
+{
+	.bodyindex
+	{	background-color: #004165;
+
+	}
+	.image
+	{
+		width: 8%;
+		height: 8%;
+	}
+
+	.image1
+	{
+		width: 100%;
+		font-size: 300%;
+	}
+	
+	.logo
+	{
+		background-color: #004165;
+		font-family: 'Rajdhani', sans-serif; 
+		color: white;
+	}
+	.user
+	{	font-family: 'Rajdhani', sans-serif; 
+		font-size: 150%;
+	}
+
+	#s1,#s2,#s3,#s4,
+	{
+		width: 20%;
+	}
+
+	.form1
+	{	height: 70%;
+		width: 100%;
+		padding-left: 30%;
+		padding-top: 10%;
+		background-color: white;
+	}
+	.d
+	{	padding-top: 8%; 
+	 }
+}
+
+@media screen and (orientation: portrait)
+{	
+	.bodyindex
+	{	background-color: #004165;
+
+	}
+	.image
+	{
+		width: 8%;
+		height: 8%;
+	}
+
+	.image1
+	{
+		width: 100%;
+		font-size: 300%;
+	}
+	
+	.logo
+	{
+		background-color: #004165;
+		font-family: 'Rajdhani', sans-serif; 
+		color: white;
+	}
+	.user
+	{	font-family: 'Rajdhani', sans-serif; 
+		font-size: 150%;
+	}
+
+	#s1,#s2,#s3,#s4
+	{
+		width: 30%;
+		border-color: black;
+		height: 100px;
+	}
+
+	.form1
+	{	height: 70%;
+		width: 100%;
+		padding-left: 30%;
+		padding-top: 10%;
+		background-color: white;
+	}
+	.d
+	{	padding-top: 8%; 
+	 }
+
+}
+</style>
+</body>
+</html>
